@@ -17,16 +17,12 @@ The model is optimized for **high accuracy**, **low computational cost**, and **
 - **Parameters:** 0.447M  
 - **MACs:** 62.28M  
 
-### Training Details
-Trained for 20 epochs with batch size 128 using AdamW optimizer, CrossEntropyLoss, OneCycleLR scheduler, and mixed precision in PyTorch.
-
 ## Results
-| Metric | Train | Test |
-|---------|--------|------|
-| **Accuracy** | 99.56% | 99.34% |
-| **Latency** | — | 7 ms |
-| **Throughput** | — | 40,713 img/sec |
-
+  | Metric | Train | Test |
+  |---------|--------|------|
+  | **Accuracy** | 99.56% | 99.34% |
+  | **Latency** | — | 7 ms |
+  | **Throughput** | — | 40,713 img/sec |
 - **Training Time:** 50 minutes (with mixed precision)  
 - **Visuals:** Accuracy / Loss curves and confusion matrix available in `results/`
 
