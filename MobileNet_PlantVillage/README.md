@@ -3,6 +3,9 @@
 ## Overview
 This project implements a **custom MobileNetV2-style CNN** from scratch in PyTorch for **PlantVillage image classification**.  
 The model is optimized for **high accuracy**, **low computational cost**, and **minimal parameters**, making it suitable for edge deployment.
+## References
+- MobileNetV2 Paper: [MobileNetV2: Inverted Residuals and Linear Bottlenecks](https://arxiv.org/abs/1801.04381)
+- Dataset: [PlantVillage Classification Dataset](https://www.kaggle.com/datasets/mohitsingh1804/plantvillage)
 
 ## Dataset
 - **Total Images:** 54,000+ color images (224×224)
