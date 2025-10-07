@@ -1,1 +1,33 @@
+# MobileNetV2 on PlantVillage Dataset
 
+## Overview
+This project implements a **custom MobileNetV2-style CNN** from scratch in PyTorch for **PlantVillage image classification**.  
+The model is optimized for **high accuracy**, **low computational cost**, and **minimal parameters**, making it suitable for edge deployment.
+
+## Dataset
+- **Total Images:** 54,000+ color images (224×224)
+- **Classes:** 38 plant disease categories
+- **Split:** ~43k training / ~10k testing samples
+
+## Model Architecture
+- **Structure:** 17 *Inverted Residual* blocks + 2 *Conv2D* layers + 1 *Fully Connected* layer (38 outputs)
+- **Parameters:** 0.447M  
+- **MACs:** 62.28M  
+
+### Training Details
+Trained for 20 epochs with batch size 128 using AdamW optimizer, CrossEntropyLoss, OneCycleLR scheduler, and mixed precision in PyTorch.
+
+## Results
+| Metric | Train | Test |
+|---------|--------|------|
+| **Accuracy** | 99.56% | 99.34% |
+| **Latency** | — | 7 ms |
+| **Throughput** | — | 40,713 img/sec |
+
+- **Training Time:** 50 minutes (with mixed precision)  
+- **Visuals:** Accuracy / Loss curves and confusion matrix available in `results/`
+
+## Key Takeaways
+- Lightweight **MobileNetV2** variant achieves **state-of-the-art accuracy** on PlantVillage with **<0.5M parameters**.  
+- **Mixed Precision** significantly reduces training time without accuracy loss.  
+- Ideal for **resource-constrained devices** or **real-time plant disease detection**.
